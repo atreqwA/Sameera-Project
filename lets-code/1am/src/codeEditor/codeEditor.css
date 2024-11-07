@@ -1,0 +1,312 @@
+/* CodeEditor.css */
+
+/* Overall container */
+.editor-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #0f0a19;
+    color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  /* Left section (Code editor area) */
+  .editor-left {
+    flex: 1;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Monaco editor container */
+  .monaco-editor {
+    background-color: #282c34 !important; /* Dark background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+  
+  /* Output area */
+  .output-container {
+    flex: 1;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Output title */
+  .output-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #eb6e2b;
+  }
+  
+  /* Run button styling */
+  .run-button {
+    background-color: transparent;
+    border: 2px solid #48bb78;
+    color: #48bb78;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .run-button:disabled {
+    background-color: #444;
+    border-color: #888;
+    color: #bbb;
+    cursor: not-allowed;
+  }
+  
+  .run-button:hover {
+    background-color: #48bb78;
+    color: #fff;
+    border-color: #48bb78;
+  }
+  
+  /* Output area container */
+  .output-box {
+    height: 75vh;
+    padding: 1rem;
+    background-color: #1c1b22;
+    border-radius: 8px;
+    border: 1px solid #333;
+    color: #ccc;
+    overflow-y: scroll;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  
+  /* Error text styling */
+  .error-output {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Scrollbars for output */
+  .output-box::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .output-box::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .output-box::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  /* CodeEditor.css */
+
+/* Overall container */
+.editor-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #0f0a19;
+    color: #fff;
+    flex-wrap: wrap;
+    position: relative; /* Needed for absolute positioning of the button */
+  }
+  
+  /* Left section (Code editor area) */
+  .editor-left {
+    flex: 1;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Monaco editor container */
+  .monaco-editor {
+    background-color: #282c34 !important; /* Dark background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+  
+  /* Output area */
+  .output-container {
+    flex: 1;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Output title */
+  .output-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #eb6e2b;
+  }
+  
+  /* Run button styling */
+  .run-button {
+    background-color: transparent;
+    border: 2px solid #48bb78;
+    color: #48bb78;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .run-button:disabled {
+    background-color: #444;
+    border-color: #888;
+    color: #bbb;
+    cursor: not-allowed;
+  }
+  
+  .run-button:hover {
+    background-color: #48bb78;
+    color: #fff;
+    border-color: #48bb78;
+  }
+  
+  /* Output area container */
+  .output-box {
+    height: 75vh;
+    padding: 1rem;
+    background-color: #1c1b22;
+    border-radius: 8px;
+    border: 1px solid #333;
+    color: #ccc;
+    overflow-y: scroll;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  
+  /* Error text styling */
+  .error-output {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Scrollbars for output */
+  .output-box::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .output-box::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .output-box::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Chatbot button container */
+  .chatbot-button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Chatbot button styling */
+  .chatbot-button {
+    background-color: #48bb78;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatbot-button:hover {
+    background-color: #38a169;
+  }
+  /* CodeEditor.css */
+.editor-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .editor-left {
+    width: 60%;
+  }
+  
+  .chatbot-button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .discord-button {
+    background-color: #7289da; /* Discord blue */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .discord-button:hover {
+    background-color: #5b6e8b; /* Darker Discord blue on hover */
+  }
+  
+  .discord-button:active {
+    background-color: #4e5a70; /* Even darker on click */
+  }
+  
+  .discord-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  /* Add this to your codeEditor.css */
+
+/* Make the chatbot button sticky to the screen */
+.chatbot-button-container {
+    width: 300px; /* Fixed width for the chatbot */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky; /* Makes it sticky */
+    top: 20px; /* Distance from the top of the screen */
+    z-index: 10; /* Make sure it stays on top of other content */
+  }
+  
+  /* Chatbot button styles */
+  .chatbot-button {
+    margin-top: 20px; /* Add some space above the button */
+    padding: 10px 20px;
+    background-color: #7289da; /* Discord-like button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .chatbot-button:hover {
+    background-color: #5a6d9b; /* Darker shade on hover */
+  }
+  
